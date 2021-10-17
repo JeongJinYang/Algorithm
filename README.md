@@ -1,2 +1,2 @@
-# -Algorithm
+# Algorithm
 Hello Java World!
