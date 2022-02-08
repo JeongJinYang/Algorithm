@@ -11,35 +11,26 @@
 x는 1 이상, 10000 이하인 정수입니다.
 */
 
-public class HashardNum {
+class Solution {
+    public boolean solution(int x) {
+        int sum = 0;
+        int temp = x;
+        boolean answer = false;
 
-	public static void main(String[] args) {
-		
-		int num = 13;
-		int sum = 0;
-		int temp = num;
-		boolean answer = false;
-		
-		//1.자릿수의 합
-		for (int i = 0; i < 5; i++) {
-			sum = sum + temp%10;
-			temp = temp/10;
-		}
-		
-		System.out.println("sum : " + sum);
-		System.out.println("num : " + num);
-		System.out.println("num%sum : " + num%sum);
-		
-		//2.주어진 수가 자릿수의 합의 결과로 나누어 떨어져야 함
-		if((num%sum)==0) {
-			answer = true;
-		}else {
-			answer = false;
-		}
-		
-		System.out.println("answer :  " + answer);
-		
-	}
+        //1.자릿수의 합
+        for (int i = 0; i < 5; i++) {
+            sum = sum + temp%10;
+            temp = temp/10;
+        }
 
+        //2.주어진 수가 자릿수의 합의 결과로 나누어 떨어져야 함
+        if((x%sum)==0) {
+            answer = true;
+        }else {
+            answer = false;
+        }
+
+        return answer;
+    }
 }
 ```
