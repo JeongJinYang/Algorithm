@@ -18,7 +18,7 @@ class Solution {
         boolean answer = false;
 
         //1.자릿수의 합
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < (int)(Math.log10(x)+1); i++) {
             sum = sum + temp%10;
             temp = temp/10;
         }
